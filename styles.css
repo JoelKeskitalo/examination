@@ -1,0 +1,67 @@
+/* normala skärmstorlekar nedan */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: grid;
+    align-items: center;
+    grid-auto-columns: 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    padding-left: 1rem;
+}
+
+.header__image {
+    width: 10rem;
+}
+
+.nav__list {
+    list-style: none;
+    display: flex;
+}
+
+.nav__item {
+    margin: 1rem;
+}
+
+.btns {
+    background: none;
+    color: rgb(26, 2, 104);
+    border: none;
+    border-radius: 1rem;
+    font-family: 'AR One Sans', sans-serif;
+    font-size: 1rem;
+    padding: 0.2rem 3rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.btns:hover {
+    color: rgb(200, 6, 6);
+}
+
+/* mindre skärmstorlekar nedan */
+
+@media (max-width: 768px) {
+    .header__image {
+        width: 8rem;
+    }
+
+    .btns {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header__image {
+        width: 6rem;
+    }
+
+    .btns {
+        font-size: 0.7rem;
+    }
+}
+
