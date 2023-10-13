@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Booking page</title>
+</head>
+<body>
+    <header class="header">
+        <img class="header__image" src="https://raw.githubusercontent.com/JoelKeskitalo/examination/main/logo/bonz.ai-logo-black-landscape.png">
+        <nav class="nav"> 
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <button id="home" class="btns">Home</btn>
+                </li>
+                <li class="nav__item">
+                    <button id="about" class="btns">About</btn>
+                </li>
+                <li class="nav__item">
+                    <button id="booking" class="btns">Booking</btn>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="booking">
+        <article class="booking__article">
+            <div class="booking__article__type">Room type  
+                <button class="booking__article__type--typebutton">all</button>
+            </div>
+            <div class="booking__article__guests">Guests
+                <button class="booking__article__guests--guestsbutton">1</button>
+            </div>
+            <div class="booking__article__price">Room Price $600
+                <div class="booking__article__price__slider">
+                    <div class="booking__article__price__slider__dot"></div>
+                </div>
+            </div>
+            <div class="booking__article__size">Room Size
+                <div class="booking__article__size__textcontainer">
+                    <input type="text" value="0">
+                    <input type="text" value="1000">
+                </div>
+            </div>
+            <div class="booking__article__accomodations">
+                <ul class="booking__article__accomodations__list">
+                    <li>
+                        <input type="checkbox" id="item1">
+                        <label for="item1">Breakfast</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="item2">
+                        <label for="item2">Pets</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="booking__article__picture1">
+                <h1 class="booking__article__picture1__headline">Double</h1>
+                <p class="booking__article__picture1__price">$299</p>
+            </div>
+            <div class="booking__article__picture2">
+                <h2 class="booking__article__picture2__headline">Double Deluxe</h2>
+                <p class="booking__article__picture2__price">$399</p>
+            </div>
+            <div class="booking__article__picture3">
+                <h3 class="booking__article__picture3__headline">Single</h3>
+                <p class="booking__article__picture3__price">$199</p>
+            </div>
+            <div class="booking__article__picture4">
+                <h4 class="booking__article__picture4__headline">Family</h4>
+                <p class="booking__article__picture4__price">$499</p>
+            </div>
+            <div class="booking__article__picture5">
+                <h5 class="booking__article__picture5__headline">Family Deluxe</h5>
+                <p class="booking__article__picture5__price">$599</p>
+            </div>
+            <div class="booking__article__picture6">
+                <h6 class="booking__article__picture6__headline">Family Standard</h6>
+                <p class="booking__article__picture6__price">$299</p>
+            </div>
+            <div class="booking__article__picture7">
+                <h1 class="booking__article__picture7__headline">Single Standard</h1>
+                <p class="booking__article__picture7__price">$99</p>
+            </div>
+            <div class="booking__article__picture8">
+                <h2 class="booking__article__picture8__headline">Single Deluxe</h2>
+                <p class="booking__article__picture8__price">$299</p>
+            </div>
+            <div class="booking__article__picture9">
+                <h3 class="booking__article__picture9__headline">Single Economy</h3>
+                <p class="booking__article__picture9__price">$299</p>
+            </div>
+            <div class="booking__article__picture10">
+                <h4 class="booking__article__picture10__headline">VIP Single</h4>
+                <p class="booking__article__picture10__price">$299</p>
+            </div>
+        </article>
+    </main>
+</body>
