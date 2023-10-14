@@ -8,10 +8,7 @@
 }
 
 header {
-    display: grid;
-    align-items: center;
-    grid-auto-columns: 1fr;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
     padding-left: 1rem;
 }
 
@@ -22,10 +19,13 @@ header {
 .nav__list {
     list-style: none;
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .nav__item {
     margin: 1rem;
+    height: 50%;
 }
 
 .btns {
@@ -38,6 +38,11 @@ header {
     padding: 0.2rem 3rem;
     text-transform: uppercase;
     text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .btns:hover {
@@ -60,7 +65,7 @@ header {
 .main__article {
     background-color: rgba(15, 14, 14, 0.353);
     border-radius: 2rem;
-    height: 40vh;
+    min-height: 40vh;
     width: 50vw;
     margin-bottom: 10rem;
     padding: 2rem;
@@ -126,27 +131,18 @@ span {
 .about__article {
     background-color: rgba(15, 14, 14, 0.353);
     border-radius: 2rem;
-    height: 80vh;
+    height: 90vh;
     width: 60vw;
     padding: 2rem;
     display: grid;
     grid-auto-columns: 1fr;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(8, 1fr);
-}
-
-.about__article__image {
-    width: 50%;
-    grid-row: 1;
-    grid-column: 2;
-    align-self: center;
-    text-align: center;
-    justify-self: center;
+    grid-template-rows: repeat(5, 1fr);
 }
 
 .fa-beer {
-    color: blue;
-    grid-row: 3;
+    color: rgb(0, 0, 0);
+    grid-row: 1;
     grid-column: 1;
     font-size: 1.5rem;
     text-align: center;
@@ -154,7 +150,7 @@ span {
 
 .about__article__headline--evening {
     color: rgb(0, 0, 0);
-    grid-row: 3;
+    grid-row: 1;
     grid-column: 1;
     font-size: 2rem;
     text-align: center;
@@ -164,7 +160,7 @@ span {
 
 .about__article__eveningtext {
     color: rgb(255, 255, 255);
-    grid-row: 4;
+    grid-row: 2;
     grid-column: 1;
     font-size: 0.7rem;
     text-align: center;
@@ -173,15 +169,15 @@ span {
 }
 
 .fa-hiking {
-    color: blue;
-    grid-row: 3;
+    color: rgb(0, 0, 0);
+    grid-row: 1;
     grid-column: 2;
     font-size: 1.7rem;
     text-align: center;
 }
 
 .about__article__headline--adventure {
-    grid-row: 3;
+    grid-row: 1;
     grid-column: 2;
     font-size: 2rem;
     text-align: center;
@@ -191,7 +187,7 @@ span {
 
 .about__article__adventuretext {
     color: white;
-    grid-row: 4;
+    grid-row: 2;
     grid-column: 2;
     font-size: 0.7rem;
     text-align: center;
@@ -200,15 +196,15 @@ span {
 }
 
 .fa-gamepad {
-    color: blue;
-    grid-row: 3;
+    color: rgb(0, 0, 0);
+    grid-row: 1;
     grid-column: 3;
     font-size: 1.7rem;
     text-align: center;
 }
 
 .about__article__headline--equipment {
-    grid-row: 3;
+    grid-row: 1;
     grid-column: 3;
     font-size: 2rem;
     text-align: center;
@@ -218,6 +214,87 @@ span {
 
 .about__article__equipmenttext {
     color: white;
+    grid-row: 2;
+    grid-column: 3;
+    font-size: 0.7rem;
+    text-align: center;
+    justify-self: center;
+    width: 70%;
+}
+
+.fa-seedling {
+    color: rgb(0, 0, 0);
+    grid-row: 3;
+    grid-column: 1;
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+.about__article__headline--environment {
+    grid-row: 3;
+    grid-column: 1;
+    font-size: 2rem;
+    text-align: center;
+    align-self: center;
+    margin-top: 1rem;
+}
+
+.about__article__environmenttext {
+    color: white;
+    grid-row: 4;
+    grid-column: 1;
+    font-size: 0.7rem;
+    text-align: center;
+    justify-self: center;
+    width: 70%;
+}
+
+.fa-jedi {
+    color: rgb(0, 0, 0);
+    grid-row: 3;
+    grid-column: 2;
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+.about__article__headline--philosophy {
+    grid-row: 3;
+    grid-column: 2;
+    font-size: 2rem;
+    text-align: center;
+    align-self: center;
+    margin-top: 1rem;
+}
+
+.about__article__philosophytext {
+    color: white;
+    grid-row: 4;
+    grid-column: 2;
+    font-size: 0.7rem;
+    text-align: center;
+    justify-self: center;
+    width: 70%;
+}
+
+.fa-city {
+    color: rgb(0, 0, 0);
+    grid-row: 3;
+    grid-column: 3;
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+.about__article__headline--locations {
+    grid-row: 3;
+    grid-column: 3;
+    font-size: 2rem;
+    text-align: center;
+    align-self: center;
+    margin-top: 1rem;
+}
+
+.about__article__locationstext {
+    color: white;
     grid-row: 4;
     grid-column: 3;
     font-size: 0.7rem;
@@ -226,20 +303,26 @@ span {
     width: 70%;
 }
 
-.about__article__featuredheadline {
-    color: white;
-    grid-row: 6;
+.about__article__midlogo {
+    width: 50%;
+    grid-row: 5;
     grid-column: 2;
-    font-size: 2rem;
-    text-align: center;
+    align-self: center;
+    justify-self: center;
+    position: relative;
+}
+
+.about__article__midlogo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 1rem rgba(255, 255, 255, 0.5);
 }
 
 .about__underline {
-        grid-row: 7;
-        grid-column: 2;
-        height: 0.1rem;
-        background-color: black;
-        margin: 1rem 0;
+    grid-row: 7;
+    grid-column: 2;
+    height: 0.1rem;
+    background-color: black;
+    margin: 1rem 0;
 }
 
 .about__article__leftpicture {
@@ -303,6 +386,7 @@ span {
     border-radius: 2rem;
     height: 90vh;
     width: 90vw;
+    max-width: 100%;
     padding: 2rem;
     display: grid;
     grid-auto-columns: 1fr;
