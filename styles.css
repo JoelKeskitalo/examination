@@ -33,6 +33,7 @@ header {
     color: rgb(26, 2, 104);
     border: none;
     border-radius: 1rem;
+    font-family: 'AR One Sans', sans-serif;
     font-size: 1rem;
     padding: 0.2rem 3rem;
     text-transform: uppercase;
@@ -43,7 +44,6 @@ header {
     color: rgb(200, 6, 6);
 }
 /* SLUT PÅ HEADER */ 
-
 .main {
     height: 100vh;
     width: 100vw;
@@ -570,7 +570,6 @@ input[type="text"] {
     transform: scale(1.3); /* Förstorar bilden med 10% */
     cursor: pointer; /* Ändrar muspekaren till en hand när du hover över bilden */
 }
-
 /* mindre skärmstorlekar nedan */
 
 @media (max-width: 768px) {
@@ -642,8 +641,6 @@ input[type="text"] {
         width: 40%;
     }
 }
-
-
 
 @media (max-width: 480px) {
     .header__image {
