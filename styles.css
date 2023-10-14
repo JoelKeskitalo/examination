@@ -44,7 +44,6 @@ header {
     color: rgb(200, 6, 6);
 }
 /* SLUT PÅ HEADER */ 
-
 .main {
     height: 100vh;
     width: 100vw;
@@ -283,6 +282,294 @@ span {
     border: 0.2rem solid black;
 }
 
+/* BOOKING page */ 
+
+.booking {
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    background-image: url('https://raw.githubusercontent.com/JoelKeskitalo/examination/main/photos/05-day.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.booking__article {
+    background-color: rgba(15, 14, 14, 0.353);
+    color: white;
+    border-radius: 2rem;
+    height: 90vh;
+    width: 90vw;
+    padding: 2rem;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 1rem 3rem;
+    text-align: center;
+}
+
+.booking__article__type {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.booking__article__type--typebutton {
+    width: 100%;
+    height: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.booking__article__type--typebutton::after {
+    content: "\25B6"; /* Unicode-tecken för en högerpil */
+    transform: rotate(90deg);
+    cursor: pointer;
+}
+
+.booking__article__guests {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.booking__article__guests--guestsbutton {
+    width: 100%;
+    height: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.booking__article__guests--guestsbutton::after {
+    content: "\25B6";
+    transform: rotate(90deg);
+    cursor: pointer;
+}
+
+.booking__article__price {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.booking__article__price__slider {
+    width: 100%;
+    height: 1rem;
+    background-color: rgb(14, 2, 83);
+    border-radius: 1rem;
+}
+
+.booking__article__price__slider__dot {
+    width: 1rem;
+    height: 1rem;
+    background-color: yellow;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.booking__article__size {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.booking__article__size__textcontainer {
+    display: flex;
+}
+
+input[type="text"] {
+    width: 50%;
+}
+
+.booking__article__accomodations {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.booking__article__accomodations__list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.booking__article__accomodations__list label {
+    margin-left: 1rem;
+}
+
+.booking__article__accomodations__list li {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.booking__article__picture1 {
+    background-image: url('https://raw.githubusercontent.com/JoelKeskitalo/examination/main/photos/01-night.jpg');
+    background-size: cover;
+    background-position: center center;
+    border: 0.1rem solid black;
+    color: white;
+    grid-column: 1;
+    grid-row: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.booking__article__picture2 {
+    background-image: url('https://raw.githubusercontent.com/JoelKeskitalo/examination/main/photos/02-night.jpg');
+    background-size: cover;
+    background-position: center center;
+    border: 0.1rem solid black;
+    color: white;
+    grid-column: 2;
+    grid-row: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.booking__article__picture3 {
+    background-image: url('https://raw.githubusercontent.com/JoelKeskitalo/examination/main/photos/03-night.jpg');
+    background-size: cover;
+    background-position: center center;
+    border: 0.1rem solid black;
+    color: white;
+    grid-column: 3;
+    grid-row: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.booking__article__picture4 {
+    background-image: url('https://raw.githubusercontent.com/JoelKeskitalo/examination/main/photos/04-night.jpg');
+    background-size: cover;
+    background-position: center center;
+    border: 0.1rem solid black;
+    color: white;
+    grid-column: 4;
+    grid-row: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.booking__article__picture5 {
+    background-image: url('https://raw.githubusercontent.com/JoelKeskitalo/examination/main/photos/05-night.jpg');
+    background-size: cover;
+    background-position: center center;
+    border: 0.1rem solid black;
+    color: white;
+    grid-column: 5;
+    grid-row: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.booking__article__picture6 {
+    background-image: url('https://raw.githubusercontent.com/JoelKeskitalo/examination/main/photos/06-night.jpg');
+    background-size: cover;
+    background-position: center center;
+    border: 0.1rem solid black;
+    color: white;
+    grid-column: 1;
+    grid-row: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.booking__article__picture7 {
+    background-image: url('https://raw.githubusercontent.com/JoelKeskitalo/examination/main/photos/07-night.jpg');
+    background-size: cover;
+    background-position: center center;
+    border: 0.1rem solid black;
+    color: white;
+    grid-column: 2;
+    grid-row: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.booking__article__picture8 {
+    background-image: url('https://raw.githubusercontent.com/JoelKeskitalo/examination/main/photos/08-night.jpg');
+    background-size: cover;
+    background-position: center center;
+    border: 0.1rem solid black;
+    color: white;
+    grid-column: 3;
+    grid-row: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.booking__article__picture9 {
+    background-image: url('https://raw.githubusercontent.com/JoelKeskitalo/examination/main/photos/01-day.jpg');
+    background-size: cover;
+    background-position: center center;
+    border: 0.1rem solid black;
+    color: white;
+    grid-column: 4;
+    grid-row: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.booking__article__picture10 {
+    background-image: url('https://raw.githubusercontent.com/JoelKeskitalo/examination/main/photos/09-night.jpg');
+    background-size: cover;
+    background-position: center center;
+    border: 0.1rem solid black;
+    color: white;
+    grid-column: 5;
+    grid-row: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.booking__article__picture1 h1,
+.booking__article__picture2 h2,
+.booking__article__picture3 h3,
+.booking__article__picture4 h4,
+.booking__article__picture5 h5,
+.booking__article__picture6 h6,
+.booking__article__picture7 h1,
+.booking__article__picture8 h2,
+.booking__article__picture9 h3,
+.booking__article__picture10 h4 {
+    font-size: 1rem; 
+    margin: 0; 
+    background-color: black;
+    color: white; /* Justera textfärgen efter dina önskemål */
+    text-align: center; /* Centrera texten om det behövs */
+}
+
+.booking__article__picture1:hover,
+.booking__article__picture2:hover,
+.booking__article__picture3:hover,
+.booking__article__picture4:hover,
+.booking__article__picture5:hover,
+.booking__article__picture6:hover,
+.booking__article__picture7:hover,
+.booking__article__picture8:hover,
+.booking__article__picture9:hover,
+.booking__article__picture10:hover {
+    transform: scale(1.3); /* Förstorar bilden med 10% */
+    cursor: pointer; /* Ändrar muspekaren till en hand när du hover över bilden */
+}
 /* mindre skärmstorlekar nedan */
 
 @media (max-width: 768px) {
