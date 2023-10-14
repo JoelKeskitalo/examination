@@ -45,9 +45,10 @@ header {
 }
 /* SLUT PÅ HEADER */ 
 
-main {
+.main {
     height: 100vh;
     width: 100vw;
+    max-width: 100%;
     background-image: url('https://raw.githubusercontent.com/JoelKeskitalo/examination/main/photos/03-night.jpg');
     background-position: center center;
     background-size: cover;
@@ -109,6 +110,179 @@ span {
     background-color: rgb(67, 38, 3);
 }
 
+/* ABOUT-page */ 
+.about {
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    background-image: url('https://raw.githubusercontent.com/JoelKeskitalo/examination/main/photos/09-night.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about__article {
+    background-color: rgba(15, 14, 14, 0.353);
+    border-radius: 2rem;
+    height: 80vh;
+    width: 60vw;
+    padding: 2rem;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+}
+
+.about__article__image {
+    width: 50%;
+    grid-row: 1;
+    grid-column: 2;
+    align-self: center;
+    text-align: center;
+    justify-self: center;
+}
+
+.fa-beer {
+    color: blue;
+    grid-row: 3;
+    grid-column: 1;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.about__article__headline--evening {
+    color: rgb(0, 0, 0);
+    grid-row: 3;
+    grid-column: 1;
+    font-size: 2rem;
+    text-align: center;
+    align-self: center;
+    margin-top: 1rem;
+}
+
+.about__article__eveningtext {
+    color: rgb(255, 255, 255);
+    grid-row: 4;
+    grid-column: 1;
+    font-size: 0.7rem;
+    text-align: center;
+    justify-self: center;
+    width: 70%;
+}
+
+.fa-hiking {
+    color: blue;
+    grid-row: 3;
+    grid-column: 2;
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+.about__article__headline--adventure {
+    grid-row: 3;
+    grid-column: 2;
+    font-size: 2rem;
+    text-align: center;
+    align-self: center;
+    margin-top: 1rem;
+}
+
+.about__article__adventuretext {
+    color: white;
+    grid-row: 4;
+    grid-column: 2;
+    font-size: 0.7rem;
+    text-align: center;
+    justify-self: center;
+    width: 70%;
+}
+
+.fa-gamepad {
+    color: blue;
+    grid-row: 3;
+    grid-column: 3;
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+.about__article__headline--equipment {
+    grid-row: 3;
+    grid-column: 3;
+    font-size: 2rem;
+    text-align: center;
+    align-self: center;
+    margin-top: 1rem;
+}
+
+.about__article__equipmenttext {
+    color: white;
+    grid-row: 4;
+    grid-column: 3;
+    font-size: 0.7rem;
+    text-align: center;
+    justify-self: center;
+    width: 70%;
+}
+
+.about__article__featuredheadline {
+    color: white;
+    grid-row: 6;
+    grid-column: 2;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.about__underline {
+        grid-row: 7;
+        grid-column: 2;
+        height: 0.1rem;
+        background-color: black;
+        margin: 1rem 0;
+}
+
+.about__article__leftpicture {
+    grid-row: 8;
+    grid-column: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.about__article__leftpicture__image {
+    width: 50%;
+    border: 0.2rem solid black;
+}
+
+.about__article__midpicture {
+    grid-row: 8;
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about__article__midpicture__image {
+    width: 50%;
+    border: 0.2rem solid black;
+}
+
+.about__article__rightpicture {
+    grid-row: 8;
+    grid-column: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about__article__rightpicture__image {
+    width: 50%;
+    border: 0.2rem solid black;
+}
+
 /* mindre skärmstorlekar nedan */
 
 @media (max-width: 768px) {
@@ -143,6 +317,41 @@ span {
 
     #rooms {
         width: 70%;
+    }
+
+    .about__article {
+        width: 80%
+    }
+
+    .about__article__headline {
+        font-size: 1.8rem; 
+
+    }
+
+    .about__underline {
+        width: 60%;
+    }
+
+    .about__article__secondheadline {
+        font-size: 0.8rem;
+        width: 60%;
+    }
+
+    .about__article__image {
+        width: 30%;
+    }
+
+    .about__article__headline--evening,
+    .about__article__headline-adventure,
+    .about__article__headline--equipment {
+        font-size: 1.6rem;
+        width: 100%;
+    }
+
+    .about__article__leftpicture__image,
+    .about__article__midpicture__image, 
+    .about__article__rightpicture__image {
+        width: 40%;
     }
 }
 
