@@ -33,6 +33,7 @@ header {
     color: rgb(26, 2, 104);
     border: none;
     border-radius: 1rem;
+    font-family: 'AR One Sans', sans-serif;
     font-size: 1rem;
     padding: 0.2rem 3rem;
     text-transform: uppercase;
@@ -282,7 +283,6 @@ span {
     border: 0.2rem solid black;
 }
 
-
 /* mindre skärmstorlekar nedan */
 
 @media (max-width: 768px) {
@@ -354,8 +354,6 @@ span {
         width: 40%;
     }
 }
-
-
 
 @media (max-width: 480px) {
     .header__image {
