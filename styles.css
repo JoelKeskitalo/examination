@@ -33,6 +33,7 @@ header {
     color: rgb(26, 2, 104);
     border: none;
     border-radius: 1rem;
+    font-family: 'AR One Sans', sans-serif;
     font-size: 1rem;
     padding: 0.2rem 3rem;
     text-transform: uppercase;
@@ -107,7 +108,6 @@ span {
 #rooms:hover {
     background-color: rgb(67, 38, 3);
 }
-
 
 /* mindre skärmstorlekar nedan */
 
