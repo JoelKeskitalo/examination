@@ -7,35 +7,42 @@
     font-family: 'AR One Sans', sans-serif;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 header {
     display: flex;
-    padding-left: 1rem;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .header__image {
     width: 10rem;
+    padding: .5rem 0;
 }
 
 .nav__list {
     list-style: none;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    gap: 1rem; 
 }
 
 .nav__item {
-    margin: 1rem;
-    height: 50%;
+    flex: 1 1 auto;
 }
 
-.btns {
+.nav__link {
     background: none;
     color: rgb(26, 2, 104);
     border: none;
-    border-radius: 1rem;
     font-family: 'AR One Sans', sans-serif;
     font-size: 1rem;
-    padding: 0.2rem 3rem;
+    padding: 0.2rem .8rem;
     text-transform: uppercase;
     text-align: center;
     text-decoration: none;
@@ -45,7 +52,7 @@ header {
     justify-content: center;
 }
 
-.btns:hover {
+.nav__link:hover {
     color: rgb(200, 6, 6);
 }
 /* SLUT PÅ HEADER */ 
@@ -53,7 +60,6 @@ header {
     height: 100vh;
     width: 100vw;
     max-width: 100%;
-    background-image: url('https://raw.githubusercontent.com/JoelKeskitalo/examination/main/photos/03-night.jpg');
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -62,598 +68,188 @@ header {
     align-items: center;
 }
 
-.main__article {
-    background-color: rgba(15, 14, 14, 0.353);
-    border-radius: 2rem;
-    min-height: 40vh;
-    width: 50vw;
-    margin-bottom: 10rem;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-.main__article__headline {
+h1 {
     font-size: 2.2rem;
-    width: 50%;
     color: rgb(255, 255, 255);
     line-height: 2.5rem;
-    text-align: center;
+    margin-bottom: 2.5rem;
 }
 
-.underline {
+.heading--no-margin {
+    margin: 0;
+}
+
+.divider {
     width: 50%;
     height: 0.1rem;
-    background-color: black;
+    background-color: white;
+    opacity: 0.5;
     margin: 1rem 0;
 }
 
-.main__article__secondheadline {
+.divider--center {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.divider--section {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+.promotion {
     color: white;
     font-size: 1rem;
     width: 50%;
     text-align: center;
 }
 
-span {
+.promotion__highlight {
     color: gold;
 }
 
-#rooms {
-    background-color: rgb(5, 5, 42);
-    width: 50%;
+.button {
+    background-color: rgb(0, 0, 205);
     color: rgb(255, 255, 255);
     border: 0.2rem solid black;
     border-radius: 2rem;
     font-size: 1rem;
     padding: 0.2rem 3rem;
+    text-decoration: none;
 }
 
-#rooms:hover {
-    background-color: rgb(67, 38, 3);
+.button:hover {
+    background-color: rgb(20, 5, 112);
+    cursor: pointer;
 }
 
 /* ABOUT-page */ 
-.about {
-    height: 100vh;
+.page {
+    flex: 1 1 auto;
     width: 100vw;
     max-width: 100%;
-    background-image: url('https://raw.githubusercontent.com/JoelKeskitalo/examination/main/photos/09-night.jpg');
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 2rem;
 }
 
-.about__article {
-    background-color: rgba(15, 14, 14, 0.353);
+.page--main {
+    background-image: url('https://raw.githubusercontent.com/JoelKeskitalo/examination/main/photos/03-night.jpg');
+}
+
+.page--about {
+    background-image: url('https://raw.githubusercontent.com/JoelKeskitalo/examination/main/photos/09-night.jpg');
+}
+
+.image-list {
+    display: flex;
+    gap: 1rem;
+}
+
+.content {
+    background-color: rgba(15, 14, 14, 0.95);
+    color: white;
     border-radius: 2rem;
-    height: 90vh;
-    width: 60vw;
     padding: 2rem;
+    max-width: 60rem;
+}
+
+.about-cards {
     display: grid;
     grid-auto-columns: 1fr;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    gap: 2rem;
 }
 
-.fa-beer {
-    color: rgb(0, 0, 0);
-    grid-row: 1;
-    grid-column: 1;
-    font-size: 1.5rem;
-    text-align: center;
-}
-
-.about__article__headline--evening {
-    color: rgb(0, 0, 0);
-    grid-row: 1;
-    grid-column: 1;
-    font-size: 2rem;
-    text-align: center;
-    align-self: center;
-    margin-top: 1rem;
-}
-
-.about__article__eveningtext {
-    color: rgb(255, 255, 255);
-    grid-row: 2;
-    grid-column: 1;
-    font-size: 0.7rem;
-    text-align: center;
-    justify-self: center;
-    width: 70%;
-}
-
-.fa-hiking {
-    color: rgb(0, 0, 0);
-    grid-row: 1;
-    grid-column: 2;
-    font-size: 1.7rem;
-    text-align: center;
-}
-
-.about__article__headline--adventure {
-    grid-row: 1;
-    grid-column: 2;
-    font-size: 2rem;
-    text-align: center;
-    align-self: center;
-    margin-top: 1rem;
-}
-
-.about__article__adventuretext {
-    color: white;
-    grid-row: 2;
-    grid-column: 2;
-    font-size: 0.7rem;
-    text-align: center;
-    justify-self: center;
-    width: 70%;
-}
-
-.fa-gamepad {
-    color: rgb(0, 0, 0);
-    grid-row: 1;
-    grid-column: 3;
-    font-size: 1.7rem;
-    text-align: center;
-}
-
-.about__article__headline--equipment {
-    grid-row: 1;
-    grid-column: 3;
-    font-size: 2rem;
-    text-align: center;
-    align-self: center;
-    margin-top: 1rem;
-}
-
-.about__article__equipmenttext {
-    color: white;
-    grid-row: 2;
-    grid-column: 3;
-    font-size: 0.7rem;
-    text-align: center;
-    justify-self: center;
-    width: 70%;
-}
-
-.fa-seedling {
-    color: rgb(0, 0, 0);
-    grid-row: 3;
-    grid-column: 1;
-    font-size: 1.7rem;
-    text-align: center;
-}
-
-.about__article__headline--environment {
-    grid-row: 3;
-    grid-column: 1;
-    font-size: 2rem;
-    text-align: center;
-    align-self: center;
-    margin-top: 1rem;
-}
-
-.about__article__environmenttext {
-    color: white;
-    grid-row: 4;
-    grid-column: 1;
-    font-size: 0.7rem;
-    text-align: center;
-    justify-self: center;
-    width: 70%;
-}
-
-.fa-jedi {
-    color: rgb(0, 0, 0);
-    grid-row: 3;
-    grid-column: 2;
-    font-size: 1.7rem;
-    text-align: center;
-}
-
-.about__article__headline--philosophy {
-    grid-row: 3;
-    grid-column: 2;
-    font-size: 2rem;
-    text-align: center;
-    align-self: center;
-    margin-top: 1rem;
-}
-
-.about__article__philosophytext {
-    color: white;
-    grid-row: 4;
-    grid-column: 2;
-    font-size: 0.7rem;
-    text-align: center;
-    justify-self: center;
-    width: 70%;
-}
-
-.fa-city {
-    color: rgb(0, 0, 0);
-    grid-row: 3;
-    grid-column: 3;
-    font-size: 1.7rem;
-    text-align: center;
-}
-
-.about__article__headline--locations {
-    grid-row: 3;
-    grid-column: 3;
-    font-size: 2rem;
-    text-align: center;
-    align-self: center;
-    margin-top: 1rem;
-}
-
-.about__article__locationstext {
-    color: white;
-    grid-row: 4;
-    grid-column: 3;
-    font-size: 0.7rem;
-    text-align: center;
-    justify-self: center;
-    width: 70%;
-}
-
-.about__article__midlogo {
-    width: 50%;
-    grid-row: 5;
-    grid-column: 2;
-    align-self: center;
-    justify-self: center;
-    position: relative;
-}
-
-.about__article__midlogo:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 1rem rgba(255, 255, 255, 0.5);
-}
-
-.about__underline {
-    grid-row: 7;
-    grid-column: 2;
-    height: 0.1rem;
-    background-color: black;
-    margin: 1rem 0;
-}
-
-.about__article__leftpicture {
-    grid-row: 8;
-    grid-column: 1;
+.about-card {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-
+    text-align: center;
 }
 
-.about__article__leftpicture__image {
-    width: 50%;
-    border: 0.2rem solid black;
+.about-card__icon {
+    font-size: 2rem;
 }
 
-.about__article__midpicture {
-    grid-row: 8;
-    grid-column: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.about-card__title {
+    font-size: 1.5;
+    margin: 0.5rem 0 0.2rem;
 }
 
-.about__article__midpicture__image {
-    width: 50%;
-    border: 0.2rem solid black;
-}
-
-.about__article__rightpicture {
-    grid-row: 8;
-    grid-column: 3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.about__article__rightpicture__image {
-    width: 50%;
-    border: 0.2rem solid black;
+.about-card__description {
+    font-size: 0.7rem;
 }
 
 /* BOOKING page */ 
-
-.booking {
-    height: 100vh;
-    width: 100vw;
-    max-width: 100%;
+.page--booking {
     background-image: url('https://raw.githubusercontent.com/JoelKeskitalo/examination/main/photos/05-day.jpg');
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.booking__article {
-    background-color: rgba(15, 14, 14, 0.353);
-    color: white;
-    border-radius: 2rem;
-    height: 90vh;
-    width: 90vw;
-    max-width: 100%;
-    padding: 2rem;
+.booking-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+
+.form-actions {
+    width: 100%;
+}
+
+.search-results {
     display: grid;
-    grid-auto-columns: 1fr;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    gap: 1rem 3rem;
-    text-align: center;
-}
-
-.booking__article__type {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-.booking__article__type--typebutton {
-    width: 100%;
-    height: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.booking__article__type--typebutton::after {
-    content: "\25B6"; /* Unicode-tecken för en högerpil */
-    transform: rotate(90deg);
-    cursor: pointer;
-}
-
-.booking__article__guests {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-.booking__article__guests--guestsbutton {
-    width: 100%;
-    height: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.booking__article__guests--guestsbutton::after {
-    content: "\25B6";
-    transform: rotate(90deg);
-    cursor: pointer;
-}
-
-.booking__article__price {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.booking__article__price__slider {
-    width: 100%;
-    height: 1rem;
-    background-color: rgb(14, 2, 83);
-    border-radius: 1rem;
-}
-
-.booking__article__price__slider__dot {
-    width: 1rem;
-    height: 1rem;
-    background-color: yellow;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.booking__article__size {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-.booking__article__size__textcontainer {
-    display: flex;
-}
-
-input[type="text"] {
-    width: 50%;
-}
-
-.booking__article__accomodations {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.booking__article__accomodations__list {
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
+    gap: 1rem;
     margin-top: 1rem;
 }
 
-.booking__article__accomodations__list label {
-    margin-left: 1rem;
+.search-results__item {
+    position: relative;
+    transition: transform .2s ease;
 }
 
-.booking__article__accomodations__list li {
-    display: flex;
-    margin-bottom: 1rem;
+.search-results__item-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(15, 14, 14, 0.8);
+    text-align: center;
+    font-size: 1rem;
+    padding: 0.2rem;
 }
 
-.booking__article__picture1 {
-    background-image: url('https://raw.githubusercontent.com/JoelKeskitalo/examination/main/photos/01-night.jpg');
-    background-size: cover;
-    background-position: center center;
-    border: 0.1rem solid black;
-    color: white;
-    grid-column: 1;
-    grid-row: 3;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.search-results__item-price {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    border-radius: 0.6rem;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: .8rem;
+    padding: 0.2rem .8rem;
+    background-color: rgba(15, 14, 14, 0.8);
 }
 
-.booking__article__picture2 {
-    background-image: url('https://raw.githubusercontent.com/JoelKeskitalo/examination/main/photos/02-night.jpg');
-    background-size: cover;
-    background-position: center center;
-    border: 0.1rem solid black;
-    color: white;
-    grid-column: 2;
-    grid-row: 3;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.search-results__item:hover {
+    transform: scale(1.2);
+    z-index: 10;
 }
 
-.booking__article__picture3 {
-    background-image: url('https://raw.githubusercontent.com/JoelKeskitalo/examination/main/photos/03-night.jpg');
-    background-size: cover;
-    background-position: center center;
-    border: 0.1rem solid black;
-    color: white;
-    grid-column: 3;
-    grid-row: 3;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.booking__article__picture4 {
-    background-image: url('https://raw.githubusercontent.com/JoelKeskitalo/examination/main/photos/04-night.jpg');
-    background-size: cover;
-    background-position: center center;
-    border: 0.1rem solid black;
-    color: white;
-    grid-column: 4;
-    grid-row: 3;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.booking__article__picture5 {
-    background-image: url('https://raw.githubusercontent.com/JoelKeskitalo/examination/main/photos/05-night.jpg');
-    background-size: cover;
-    background-position: center center;
-    border: 0.1rem solid black;
-    color: white;
-    grid-column: 5;
-    grid-row: 3;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.booking__article__picture6 {
-    background-image: url('https://raw.githubusercontent.com/JoelKeskitalo/examination/main/photos/06-night.jpg');
-    background-size: cover;
-    background-position: center center;
-    border: 0.1rem solid black;
-    color: white;
-    grid-column: 1;
-    grid-row: 4;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.booking__article__picture7 {
-    background-image: url('https://raw.githubusercontent.com/JoelKeskitalo/examination/main/photos/07-night.jpg');
-    background-size: cover;
-    background-position: center center;
-    border: 0.1rem solid black;
-    color: white;
-    grid-column: 2;
-    grid-row: 4;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.booking__article__picture8 {
-    background-image: url('https://raw.githubusercontent.com/JoelKeskitalo/examination/main/photos/08-night.jpg');
-    background-size: cover;
-    background-position: center center;
-    border: 0.1rem solid black;
-    color: white;
-    grid-column: 3;
-    grid-row: 4;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.booking__article__picture9 {
-    background-image: url('https://raw.githubusercontent.com/JoelKeskitalo/examination/main/photos/01-day.jpg');
-    background-size: cover;
-    background-position: center center;
-    border: 0.1rem solid black;
-    color: white;
-    grid-column: 4;
-    grid-row: 4;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.booking__article__picture10 {
-    background-image: url('https://raw.githubusercontent.com/JoelKeskitalo/examination/main/photos/09-night.jpg');
-    background-size: cover;
-    background-position: center center;
-    border: 0.1rem solid black;
-    color: white;
-    grid-column: 5;
-    grid-row: 4;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.booking__article__picture1 h1,
-.booking__article__picture2 h2,
-.booking__article__picture3 h3,
-.booking__article__picture4 h4,
-.booking__article__picture5 h5,
-.booking__article__picture6 h6,
-.booking__article__picture7 h1,
-.booking__article__picture8 h2,
-.booking__article__picture9 h3,
-.booking__article__picture10 h4 {
-    font-size: 1rem; 
-    margin: 0; 
-    background-color: black;
-    color: white; /* Justera textfärgen efter dina önskemål */
-    text-align: center; /* Centrera texten om det behövs */
-}
-
-.booking__article__picture1:hover,
-.booking__article__picture2:hover,
-.booking__article__picture3:hover,
-.booking__article__picture4:hover,
-.booking__article__picture5:hover,
-.booking__article__picture6:hover,
-.booking__article__picture7:hover,
-.booking__article__picture8:hover,
-.booking__article__picture9:hover,
-.booking__article__picture10:hover {
-    transform: scale(1.3); /* Förstorar bilden med 10% */
-    cursor: pointer; /* Ändrar muspekaren till en hand när du hover över bilden */
-}
 /* mindre skärmstorlekar nedan */
 
 @media (max-width: 768px) {
@@ -661,68 +257,25 @@ input[type="text"] {
         width: 8rem;
     }
 
-    .btns {
+    .nav__link {
         font-size: 0.8rem;
     }
 
-    .main__article {
-        height: auto;
-        width: 90%;
-        margin-bottom: 5rem;
-    }
-
-    .main__article__headline {
+    h1 {
         font-size: 1.8rem;
-        width: 80%;
         line-height: 2rem;
     }
 
-    .underline {
+    .divider {
         width: 70%;
     }
 
-    .main__article__secondheadline {
+    .promotion {
         font-size: 0.9rem;
-        width: 70%;
     }
 
-    #rooms {
-        width: 70%;
-    }
-
-    .about__article {
-        width: 80%
-    }
-
-    .about__article__headline {
-        font-size: 1.8rem; 
-
-    }
-
-    .about__underline {
-        width: 60%;
-    }
-
-    .about__article__secondheadline {
-        font-size: 0.8rem;
-        width: 60%;
-    }
-
-    .about__article__image {
-        width: 30%;
-    }
-
-    .about__article__headline--evening,
-    .about__article__headline-adventure,
-    .about__article__headline--equipment {
-        font-size: 1.6rem;
-        width: 100%;
-    }
-
-    .about__article__leftpicture__image,
-    .about__article__midpicture__image, 
-    .about__article__rightpicture__image {
-        width: 40%;
+    .search-results {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -731,8 +284,25 @@ input[type="text"] {
         width: 6rem;
     }
 
-    .btns {
+    .nav__link {
         font-size: 0.7rem;
+    }
+
+    .nav__list,
+    .nav {
+        width: 100%;
+    }
+
+    .about-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .image-list {
+        flex-direction: column;
+    }
+
+    .search-results {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 

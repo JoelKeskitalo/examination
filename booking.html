@@ -17,87 +17,108 @@
         <nav class="nav"> 
             <ul class="nav__list">
                 <li class="nav__item">
-                    <a href="index.html" class="btns">Home</a>
+                    <a href="index.html" class="nav__link">Home</a>
                 </li>
                 <li class="nav__item">
-                    <a href="about.html" class="btns">About</a>
+                    <a href="about.html" class="nav__link">About</a>
                 </li>
                 <li class="nav__item">
-                    <a href="booking.html" class="btns">Booking</a>
+                    <a href="booking.html" class="nav__link">Booking</a>
                 </li>
             </ul>
         </nav>
     </header>
-    <main class="booking">
-        <article class="booking__article">
-            <div class="booking__article__type">Room type  
-                <button class="booking__article__type--typebutton">all</button>
-            </div>
-            <div class="booking__article__guests">Guests
-                <button class="booking__article__guests--guestsbutton">1</button>
-            </div>
-            <div class="booking__article__price">Room Price $600
-                <div class="booking__article__price__slider">
-                    <div class="booking__article__price__slider__dot"></div>
+    <main class="page page--booking">
+        <article class="content">
+            <h1 class="heading">Booking</h1>
+            <form class="booking-form">
+                <div class="form-group">
+                    <label class="label" for="room-type">Room type</label>
+                    <select id="room-type" name="room-type">
+                        <option>All</option>
+                        <option>Single</option>
+                        <option>Double</option>
+                        <option>Family</option>
+                    </select>
                 </div>
-            </div>
-            <div class="booking__article__size">Room Size
-                <div class="booking__article__size__textcontainer">
-                    <input type="text" value="0">
-                    <input type="text" value="1000">
+                <div class="form-group">
+                    <label class="label" for="guests">Guests</label>
+                    <select id="guests" name="guests">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4+</option>
+                    </select>
                 </div>
-            </div>
-            <div class="booking__article__accomodations">
-                <ul class="booking__article__accomodations__list">
-                    <li>
-                        <input type="checkbox" id="item1">
-                        <label for="item1">Breakfast</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="item2">
-                        <label for="item2">Pets</label>
-                    </li>
-                </ul>
-            </div>
-            <div class="booking__article__picture1">
-                <h1 class="booking__article__picture1__headline">Double</h1>
-                <p class="booking__article__picture1__price">$299</p>
-            </div>
-            <div class="booking__article__picture2">
-                <h2 class="booking__article__picture2__headline">Double Deluxe</h2>
-                <p class="booking__article__picture2__price">$399</p>
-            </div>
-            <div class="booking__article__picture3">
-                <h3 class="booking__article__picture3__headline">Single</h3>
-                <p class="booking__article__picture3__price">$199</p>
-            </div>
-            <div class="booking__article__picture4">
-                <h4 class="booking__article__picture4__headline">Family</h4>
-                <p class="booking__article__picture4__price">$499</p>
-            </div>
-            <div class="booking__article__picture5">
-                <h5 class="booking__article__picture5__headline">Family Deluxe</h5>
-                <p class="booking__article__picture5__price">$599</p>
-            </div>
-            <div class="booking__article__picture6">
-                <h6 class="booking__article__picture6__headline">Family Standard</h6>
-                <p class="booking__article__picture6__price">$299</p>
-            </div>
-            <div class="booking__article__picture7">
-                <h1 class="booking__article__picture7__headline">Single Standard</h1>
-                <p class="booking__article__picture7__price">$99</p>
-            </div>
-            <div class="booking__article__picture8">
-                <h2 class="booking__article__picture8__headline">Single Deluxe</h2>
-                <p class="booking__article__picture8__price">$259</p>
-            </div>
-            <div class="booking__article__picture9">
-                <h3 class="booking__article__picture9__headline">Single Economy</h3>
-                <p class="booking__article__picture9__price">$159</p>
-            </div>
-            <div class="booking__article__picture10">
-                <h4 class="booking__article__picture10__headline">VIP Single</h4>
-                <p class="booking__article__picture10__price">$299</p>
+                <div class="form-group">
+                    <label class="label" for="price">Price</label>
+                    <input type="range" max="1000" value="600" id="price" name="price">
+                </div>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" name="filter" value="breakfast"> Breakfast
+                    </label>
+                    <label>
+                        <input type="checkbox" name="filter" value="pets"> Pets
+                    </label>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="button">Search</button>
+                </div>
+            </form>
+            <hr class="divider divider--center divider--section">
+            <h2>Search result</h2>
+            <div class="search-results">
+                <div class="search-results__item">
+                    <h3 class="search-results__item-title">Double</h3>
+                    <p class="search-results__item-price">$299</p>
+                    <img class="search-results__item-picture" src="https://raw.githubusercontent.com/JoelKeskitalo/examination/main/photos/01-night.jpg">
+                </div>
+                <div class="search-results__item">
+                    <h3 class="search-results__item-title">Double Deluxe</h3>
+                    <p class="search-results__item-price">$399</p>
+                    <img class="search-results__item-picture" src="https://raw.githubusercontent.com/JoelKeskitalo/examination/main/photos/02-night.jpg">
+                </div>
+                <div class="search-results__item">
+                    <h3 class="search-results__item-title">Single</h3>
+                    <p class="search-results__item-price">$199</p>
+                    <img class="search-results__item-picture" src="https://raw.githubusercontent.com/JoelKeskitalo/examination/main/photos/03-night.jpg">
+                </div>
+                <div class="search-results__item">
+                    <h3 class="search-results__item-title">Family</h3>
+                    <p class="search-results__item-price">$499</p>
+                    <img class="search-results__item-picture" src="https://raw.githubusercontent.com/JoelKeskitalo/examination/main/photos/04-night.jpg">
+                </div>
+                <div class="search-results__item">
+                    <h3 class="search-results__item-title">Family Deluxe</h3>
+                    <p class="search-results__item-price">$599</p>
+                    <img class="search-results__item-picture" src="https://raw.githubusercontent.com/JoelKeskitalo/examination/main/photos/05-night.jpg">
+                </div>
+                <div class="search-results__item">
+                    <h3 class="search-results__item-title">Family Standard</h3>
+                    <p class="search-results__item-price">$299</p>
+                    <img class="search-results__item-picture" src="https://raw.githubusercontent.com/JoelKeskitalo/examination/main/photos/06-night.jpg">
+                </div>
+                <div class="search-results__item">
+                    <h3 class="search-results__item-title">Single Standard</h3>
+                    <p class="search-results__item-price">$99</p>
+                    <img class="search-results__item-picture" src="https://raw.githubusercontent.com/JoelKeskitalo/examination/main/photos/07-night.jpg">
+                </div>
+                <div class="search-results__item">
+                    <h3 class="search-results__item-title">Single Deluxe</h3>
+                    <p class="search-results__item-price">$259</p>
+                    <img class="search-results__item-picture" src="https://raw.githubusercontent.com/JoelKeskitalo/examination/main/photos/08-night.jpg">
+                </div>
+                <div class="search-results__item">
+                    <h3 class="search-results__item-title">Single Economy</h3>
+                    <p class="search-results__item-price">$159</p>
+                    <img class="search-results__item-picture" src="https://raw.githubusercontent.com/JoelKeskitalo/examination/main/photos/01-day.jpg">
+                </div>
+                <div class="search-results__item">
+                    <h3 class="search-results__item-title">VIP Single</h3>
+                    <p class="search-results__item-price">$299</p>
+                    <img class="search-results__item-picture" src="https://raw.githubusercontent.com/JoelKeskitalo/examination/main/photos/09-night.jpg">
+                </div>
             </div>
         </article>
     </main>
